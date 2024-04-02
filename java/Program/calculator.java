@@ -4,33 +4,38 @@ import java.util.Scanner;
 
 public class calculator {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the first number: ");
-        double x = sc.nextDouble();
-        System.out.println("Enter the second number: ");
-        double y = sc.nextDouble();
-        System.out.println("Enter the operator (+, -, *, /): ");
-        char operator = sc.next().charAt(0);
-        double result;
-
-        switch (operator) {
-            case '+':
-                result = x + y;
+        Scanner in = new Scanner(System.in);
+        int ans = 0; 
+        while(true){
+            System.out.println("Enter the operator: ");
+            char op = in.next().trim().charAt(0);
+            if(op == '+' || op == '-' || op == '*' || op == '/' || op == '%'){
+                System.out.println("Enter two numbers: ");
+                int num1 = in.nextInt();
+                int num2 = in.nextInt();
+                if(op == '+'){
+                    ans = num1 + num2;
+                }
+                if(op == '-'){
+                    ans = num1 - num2;
+                }
+                if(op == '*'){
+                    ans = num1 * num2;
+                }
+                if(op == '/'){
+                    if(num2 != 0){
+                        ans = num1 / num2;
+                    }
+                }
+                if(op == '%'){
+                    ans = num1 % num2;
+                }
+            }else if(op == 'x' || op == 'X'){
                 break;
-            case '-':
-                result = x - y;
-                break;
-            case '*':
-                result = x * y;
-                break;
-            case '/':
-                result = x / y;
-                break;
-            default:
-                System.out.println("Invalid operator");
-                return;
+            }else{
+                System.out.println("Invalid Operation");
+            }
+            System.out.println(ans);
         }
-
-        System.out.println("The result is " + result);
     }
 }
