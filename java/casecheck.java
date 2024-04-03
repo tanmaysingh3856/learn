@@ -1,6 +1,10 @@
+import java.util.Scanner;
+
 public class casecheck {
     public static void main(String[] args) {
-        char ch = 'z';
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a character: ");
+        char ch = sc.next().charAt(0);
         switch (ch) {
             case 'a':
                 System.out.println("This is vowel a");
@@ -18,7 +22,7 @@ public class casecheck {
                 System.out.println("This is vowel u");
                 break;
             default:
-                System.out.println("This is consonant");
+                System.out.println("Consonant");
         }
     }
 }
