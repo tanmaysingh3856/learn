@@ -6,8 +6,8 @@ public class swapexample {
         greet(name);
     }
 
-    private static void greet(String name) {
-        System.out.println("Hello " + name + "!");
+    private static void greet(String naam) {
+        System.out.println("Hello " + naam + "!");
 
     }
 }
