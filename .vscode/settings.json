@@ -1,6 +1,10 @@
 {
+<<<<<<< HEAD
     "C_Cpp.default.compilerPath": "C:\\MinGW\\bin\\gcc.exe",
     "files.associations": {
         "chrono": "cpp"
     }
+=======
+    "C_Cpp.default.compilerPath": "C:\\MinGW\\bin\\gcc.exe"
+>>>>>>> 399db3ee94e19adf3bdf4df7f455b10df7bd1717
 }
